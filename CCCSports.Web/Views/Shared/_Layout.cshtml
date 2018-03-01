@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - CCC Sport Centre</title>
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "home-btn-logo" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Shop", "ShopHome", "Shop")</li>
+                    <li>@Html.ActionLink("Facilities", "FacilitiesHome", "Facilities")</li>
+                    <li>@Html.ActionLink("Member's Area", "MembersHome", "Membership")</li>
+
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Bookings", "BookingCalander", "Home")</li>
+                        <li>@Html.ActionLink("Equipment", "EquipmentHome", "Equipment")</li>
+                    }
+
+                    @if (User.IsInRole("Staff") || User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        <li>@Html.ActionLink("Cafe", "CafeHome", "Cafe")</li>
+                        <li>@Html.ActionLink("Reports", "ReportsIndex", "Reports")</li>
+                    }
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        <li>@Html.ActionLink("Admin Controls", "AdminSettings", "Admin")</li>
+                    }                  
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @Html.Partial("_Notifications")
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CCC Sports Centre</p>
+            <span>@Html.ActionLink("Contact", "Contact", "Home")</span>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

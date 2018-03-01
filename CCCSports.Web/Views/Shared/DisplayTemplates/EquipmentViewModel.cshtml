@@ -1,0 +1,53 @@
+﻿@model CCCSports.Web.Models.EquipmentViewModel
+
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="product-box">
+@if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff") || User.IsInRole("Clerk"))
+{
+    @Html.ActionLink("Remove Item", "DeleteEquipment", "Equipment", new { id = Model.EquipmentId }, null)<br />
+    @Html.ActionLink("Edit Item", "EditEquipment", "Equipment", new { id = Model.EquipmentId }, null)
+}
+
+
+        <h3><b>@Model.EquipmentName</b></h3>
+        <div class="product-id">Product ID: #@Model.EquipmentId</div>
+        <br />
+        <div class="product-cost"><b>£@Model.EquipmentCost</b></div>
+        <br />
+        <div>
+            @if (Model.AmountInStock <= 5)
+            {
+                <p>(@Model.AmountInStock left in stock)</p>
+                <b style="color:#e88e00">Stock is low</b>
+            }
+            else if (Model.AmountInStock == 0)
+            {
+                <p>(@Model.AmountInStock left in stock)</p>
+                <b style="color:#ce0000">Out of Stock</b>
+            }
+            else
+            {
+                <p>(@Model.AmountInStock left in stock)</p>
+                <b style="color:#029f00">In Stock</b>
+            }
+        </div>
+
+        <div>
+            @if (Model.EquipmentCondition == "Service")
+            {
+                <b style="color:#e88e00">(@Model.EquipmentCondition)</b>
+            }
+            else if (Model.EquipmentCondition == "Broken")
+            {
+                <b style="color:#ce0000">(@Model.EquipmentCondition)</b>
+            }
+            else
+            {      
+                <b style="color:#029f00">(@Model.EquipmentCondition)</b>
+            }
+        </div>
+        <button class="btn btn-default">@Html.ActionLink("Add to Hire", "AddToHire", "Equipment")</button>
+    </div>
+</div>
+

@@ -1,0 +1,177 @@
+﻿@model CCCSports.Web.Models.MembershipInputModel
+
+@{
+    ViewBag.Title = "Membership";
+}
+
+@Styles.Render("~/Content/css")
+
+<!-- Load the Client component. -->
+<script src="https://js.braintreegateway.com/web/3.15.0/js/client.min.js"></script>
+
+<!-- Load the Hosted Fields component. -->
+<script src="https://js.braintreegateway.com/web/3.15.0/js/hosted-fields.min.js"></script> 
+
+<br />
+<b>Pricing:</b>
+<ul>
+    <li>Adult (16+) - £30</li>
+    <li>Juvenile (Under 16) - £15</li>
+    <li>Family - £75</li>
+</ul>
+<p>If you don't select "This is a family membership" you will be put into the membership type that applies to your age.</p>
+<br />
+
+@if (User.Identity.IsAuthenticated)
+{
+
+    <h2>Sign Up</h2>
+
+    <p>We can offer you so much more if you start your membership today! <b>You will be billed anually.</b></p>
+    using (Html.BeginForm())
+    {
+
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Start Membership</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <p>You are signed in as: </p> <b>@User.Identity.Name</b>
+            </div>
+            <div>
+                Is this correct? <br />
+                You will be creating a membership for this account. Please make sure you are signed in with the right account.
+            </div>
+            <br />
+            <div class="simple-box">
+                <form id="member-subscription-form" action=@Url.Action("StartSubscription", "Membership") method="post">
+                    <div id="error-message"></div>
+
+                    <label for="card-number">Card Number</label>
+                    <div class="hosted-field" id="card-number"></div>
+
+                    <label for="cvv">CVV</label>
+                    <div class="hosted-field" id="cvv"></div>
+
+                    <label for="expiration-date">Expiration Date</label>
+                    <div class="hosted-field" id="expiration-date" style="border-width:1px"></div>
+
+                    <input type="hidden" name="payment_method_nonce">
+                    <input type="submit" value="Start Membership" disabled>
+                </form>  
+            </div>
+
+          
+
+
+            <script>
+                var form = document.querySelector('#member-subscription-form');
+                var submit = document.querySelector('input[type="submit"]');
+                var Token = "@Html.Raw(ViewBag.ClientToken)";
+
+                braintree.client.create({
+                    // Replace this with your own authorization.
+                    authorization: Token
+                }, function (clientErr, clientInstance) {
+                    if (clientErr) {
+                        // Handle error in client creation
+                        return;
+                    }
+
+                    braintree.hostedFields.create({
+                        client: clientInstance,
+                        styles: {
+                            'input': {
+                                'font-size': '14pt',
+                                'border': '1px solid #333'
+                            },
+                            'input.invalid': {
+                                'color': 'red'
+                            },
+                            'input.valid': {
+                                'color': 'green'
+                            },                            
+
+                        },
+                        fields: {
+                            number: {
+                                selector: '#card-number',
+                                placeholder: '4111 1111 1111 1111'
+                            },
+                            cvv: {
+                                selector: '#cvv',
+                                placeholder: '123'
+                            },
+                            expirationDate: {
+                                selector: '#expiration-date',
+                                placeholder: '10/2019'
+                            }
+                        }
+                    }, function (hostedFieldsErr, hostedFieldsInstance) {
+                        if (hostedFieldsErr) {
+                            Console.Write("error");
+                            return;
+                        }
+
+                        submit.removeAttribute('disabled');
+
+                        form.addEventListener('submit', function (event) {
+                            event.preventDefault();
+
+                            hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+                                if (tokenizeErr) {
+                                    // Handle error in Hosted Fields tokenization
+                                    Console.Write("error in token creation")
+                                    return;
+                                }
+
+                                // Put `payload.nonce` into the `payment_method_nonce` input, and then
+                                // submit the form. Alternatively, you could send the nonce to your server
+                                // with AJAX.
+                                document.querySelector('input[name="payment_method_nonce"]').value = payload.nonce;
+                                form.submit();
+                            });
+                        }, false);
+                    });
+                });
+            </script>
+
+            <br />
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsFamily, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.IsFamily)
+                        @Html.ValidationMessageFor(model => model.IsFamily, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div style="text-align:center">
+                @Html.ActionLink("Start Membership", "AddToMember", "Membership", new { @class = "btn btn-primary" })
+            </div>
+
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back", "MembersHome")
+    </div>
+
+}
+else
+{
+    <i>You must have an account to view this page.</i>
+    <br />
+    <i>Please @Html.ActionLink("Register", "Register", "Account") an account.</i>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

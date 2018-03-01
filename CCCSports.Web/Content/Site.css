@@ -1,0 +1,138 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.home-btn-logo{
+    background: url(Images/CCClogo.png) no-repeat center;
+    display: block;
+    height: 50px;
+    width: 50px;
+    align-content: space-around;
+    text-indent: -9999px; /* hides the link text */
+}
+
+.alert {
+    margin-top : 10px;
+}
+
+.simple-box{
+    width: 100%;
+    background: #e4e4e4;
+    border-radius: 5px;
+    border-color: #000000;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    word-wrap: break-word;
+}
+
+.facility-box{
+    width: auto;
+    background: #e6e6e6;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #428bca;
+    padding: 5px;
+    margin: 10px 150px;
+    word-wrap: break-word;
+}
+
+.product-box{
+    width: 100%;
+    background: #ebebeb;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #428bca;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    word-wrap: break-word;
+}
+
+.product-cost{
+    font-size: 18px;
+    color: #c30000
+}
+
+.product-id{
+    font-size: 10px;
+    color: #808080;
+}
+
+.product-rating{
+    font-size: 14px;
+}
+
+#card-number {
+  border: 1px solid #333;
+  -webkit-transition: border-color 160ms;
+  transition: border-color 160ms;
+}
+
+#card-number.braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+#card-number.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+#card-number.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+#cvv {
+  border: 1px solid #333;
+  -webkit-transition: border-color 160ms;
+  transition: border-color 160ms;
+}
+
+#cvv.braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+#cvv.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+#cvv.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+
+#expiration-date {
+  border: 1px solid #333;
+  -webkit-transition: border-color 160ms;
+  transition: border-color 160ms;
+}
+
+#expiration-date.braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+#expiration-date.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+#expiration-date.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}

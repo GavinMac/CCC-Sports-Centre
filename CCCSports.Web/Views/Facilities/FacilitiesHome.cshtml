@@ -1,0 +1,101 @@
+﻿@model CCCSports.Web.Models.FacilityViewModel
+
+@{
+    ViewBag.Title = "Facilities";
+}
+
+@Styles.Render("~/Content/css")
+
+<h2>Facilities</h2>
+
+<br />
+<div class="facility-box" style="text-align:center">
+    <h3>Activity Hall</h3>
+    <img style="text-align:center" src="~/Content/Images/ActivityHallSmall.jpg" alt="Activity Hall" width="480" height="185"/>
+    <br />
+    <br />
+    <div style="text-align:center">
+
+            @Html.ActionLink("View Details", "ActivityHallDetails", "Facilities", null, new { @class = "btn btn-primary" })
+
+            @if (User.IsInRole("Member") || User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk") && User.Identity.IsAuthenticated)
+            {
+                @Html.ActionLink("Make Activity Booking", "MakeActivityBooking", "BookHallActivity", null, new { @class = "btn btn-primary" })                               
+                <span> </span>
+                @Html.ActionLink("Make Class Booking", "MakeActivityBooking", "BookHallActivity", null, new { @class = "btn btn-primary" })
+                <span> </span>
+                @Html.ActionLink("View Booking Availabilites", "BookingCalander", "Home", null, new { @class = "btn btn-primary" })
+            }
+            else
+            {
+                <button type="button" class="btn btn-primary disabled">Make Booking</button>
+                <br />
+                <i>You must be a member to make a booking in the activity hall.</i>
+            }
+ 
+    </div>
+</div>
+
+<br />
+<div class="facility-box" style="text-align:center">
+    <h3>Swimming Pool</h3>
+    <img style="text-align:center" src="~/Content/Images/SwimmingPoolSmall.jpg" alt="Swimming Pool" width="480" height="185" />
+    <br />
+    <br />
+    <div style="text-align:center">
+        @Html.ActionLink("View Details", "SwimmingPoolDetails", "Facilities", null, new { @class = "btn btn-primary" })
+    </div>
+    <br />
+    <i>The swimming pool can't be booked, but you can pay to use this facility on walk-in.</i>
+</div>
+
+<br />
+<div class="facility-box" style="text-align:center">
+    <h3>Gym</h3>
+    <img style="text-align:center" src="~/Content/Images/GymSmall.jpg" alt="Gym" width="480" height="185" />
+    <br />
+    <br />
+    <div style="text-align:center">
+        @Html.ActionLink("View Details", "GymDetails", "Facilities", null, new { @class = "btn btn-primary" })
+    </div>
+    <br />
+    <i>The gym can't be booked, but you can pay to use this facilitiy on walk-in.</i>
+</div>
+
+<br />
+<div class="facility-box" style="text-align:center">
+    <h3>Function Room</h3>
+    <img style="text-align:center" src="~/Content/Images/FunctionRoomSmall.jpg" alt="Swimming Pool" width="480" height="185" />
+    <br />
+    <br />
+    <div style="text-align:center">
+        @Html.ActionLink("View Details", "FunctionRoomDetails", "Facilities", null, new { @class = "btn btn-primary" })
+        
+        @if (User.IsInRole("Member") || User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk") && User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Make Booking", "MakeRoomBooking", "RoomBooking", null, new { @class = "btn btn-primary" })
+            <span></span>
+            @Html.ActionLink("View Booking Availabilites", "BookingCalander", "Home", null, new { @class = "btn btn-primary" })
+        }
+        else
+        {
+            <button type="button" class="btn btn-primary disabled">Make Booking</button>
+            <br />
+            <i>You must be a member to make a booking in the function room.</i>
+        }    
+    </div>
+</div>
+
+<br />
+<div class="facility-box" style="text-align:center">
+    <h3>Cafe</h3>
+    <img style="text-align:center" src="~/Content/Images/CafeSmall.jpg" alt="Cafe" width="480" height="185" />
+    <br />
+    <br />
+    <div style="text-align:center">
+        @Html.ActionLink("View Details", "CafeDetails", "Facilities", new { @class = "btn btn-primary" })
+    </div>
+    <br />
+    <i>The cafe can't be booked, it is open for all.</i>
+</div>
+

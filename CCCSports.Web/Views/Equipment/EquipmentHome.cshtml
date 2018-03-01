@@ -1,0 +1,35 @@
+﻿@model CCCSports.Web.Models.EquipmentViewModel
+
+@{
+    ViewBag.Title = "Equipment";
+}
+
+<h2>Equipment</h2>
+
+@Html.ActionLink("Equipment Cart", "HireCart", "Equipment")
+
+@if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
+{
+    <div class="container button-wrapper">
+        <div class="col-md-2 col-md-offset-5">
+            <button class="btn button-wrapper"><span>@Html.ActionLink("Add Equipment", "AddEquipment", "Equipment")</span></button>
+        </div>
+    </div>
+}
+
+<p></p>
+
+<div class="row">
+
+    @if (Model.EquipmentList.Any())
+    {
+        @Html.DisplayFor(x => x.EquipmentList)
+
+    }
+    else
+    {
+        <p><i>No equipment to show</i></p>
+    }
+
+</div>
+

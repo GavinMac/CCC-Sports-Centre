@@ -1,0 +1,232 @@
+﻿@model List<CCCSports.Web.Models.UserDetailsViewModel>
+
+@{
+    ViewBag.Title = "Staff";
+}
+
+<h2>Staff</h2>
+
+
+<h3>Bookings/Membership Clerks</h3>
+<p>Reception</p>
+@foreach (var targetUser in Model)
+{
+    if (targetUser.Roles.Contains("BookingsClerk") || targetUser.Roles.Contains("MembershipClerk"))
+    {
+        <div>
+            <div class="simple-box">
+                <div style="font:12px">ID: @targetUser.Id</div>
+                <div><b>Name: </b>@targetUser.FirstName @targetUser.LastName </div>
+                <div><b>Email: </b>@targetUser.Email  </div>
+                <div><b>Username: </b>@targetUser.InputUsername</div>
+                <div><b>Date of Birth: </b>@targetUser.DateOfBirth</div>
+                <div><b>Age: </b>@targetUser.Age</div>
+                <div><b>Gender: </b>@targetUser.Gender</div>
+
+                <div>
+                    <b>Address: </b><br />
+                    @targetUser.HouseNumber
+                    @targetUser.Street<br />
+                    @targetUser.Town<br />
+                    @targetUser.PostCode<br />
+                </div>
+
+
+                @foreach (var role in targetUser.Roles)
+                {
+                    <div>Access Level: <b>@role </b></div>
+                }
+
+                <br />
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Change Access Level
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">@Html.ActionLink("User", "ChangeRoleUser", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Member", "ChangeRoleMember", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Staff", "ChangeRoleStaff", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Membership Clerk", "ChangeRoleMClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Bookings Clerk", "ChangeRoleClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Manager", "ChangeRoleManager", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Administrator", "ChangeRoleAdmin", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    }
+}
+<br />
+<br />
+<h3>Cafe Staff</h3>
+<p>Cafe</p>
+@foreach (var targetUser in Model)
+{
+    if (targetUser.Roles.Contains("Staff"))
+    {
+        <div>
+            <div class="simple-box">
+                <div style="font:12px">ID: @targetUser.Id</div>
+                <div><b>Name: </b>@targetUser.FirstName @targetUser.LastName </div>
+                <div><b>Email: </b>@targetUser.Email  </div>
+                <div><b>Username: </b>@targetUser.InputUsername</div>
+                <div><b>Date of Birth: </b>@targetUser.DateOfBirth</div>
+                <div><b>Age: </b>@targetUser.Age</div>
+                <div><b>Gender: </b>@targetUser.Gender</div>
+                <div>
+                    <b>Address: </b><br />
+                    @targetUser.HouseNumber
+                    @targetUser.Street<br />
+                    @targetUser.Town<br />
+                    @targetUser.PostCode<br />
+                </div>
+
+
+                @foreach (var role in targetUser.Roles)
+                {
+                    <div>Access Level: <b>@role </b></div>
+                }
+
+                <br />
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Change Access Level
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">@Html.ActionLink("User", "ChangeRoleUser", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Member", "ChangeRoleMember", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Staff", "ChangeRoleStaff", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Membership Clerk", "ChangeRoleMClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Bookings Clerk", "ChangeRoleClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Manager", "ChangeRoleManager", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Administrator", "ChangeRoleAdmin", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    }
+}
+<br />
+<br />
+<h3>Manager</h3>
+<p>(Whole centre) Manager level users</p>
+@foreach (var targetUser in Model)
+{
+    if (targetUser.Roles.Contains("Manager"))
+    {
+        <div>
+            <div class="simple-box">
+                <div style="font:12px">ID: @targetUser.Id</div>
+                <div><b>Name: </b>@targetUser.FirstName @targetUser.LastName </div>
+                <div><b>Email: </b>@targetUser.Email  </div>
+                <div><b>Username: </b>@targetUser.InputUsername</div>
+                <div><b>Date of Birth: </b>@targetUser.DateOfBirth</div>
+                <div><b>Age: </b>@targetUser.Age</div>
+                <div><b>Gender: </b>@targetUser.Gender</div>
+                <div>
+                    <b>Address: </b><br />
+                    @targetUser.HouseNumber
+                    @targetUser.Street<br />
+                    @targetUser.Town<br />
+                    @targetUser.PostCode<br />
+                </div>
+
+
+                @foreach (var role in targetUser.Roles)
+                {
+                    <div>Access Level: <b>@role </b></div>
+                }
+
+                <br />
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Change Access Level
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">@Html.ActionLink("User", "ChangeRoleUser", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Member", "ChangeRoleMember", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Staff", "ChangeRoleStaff", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Membership Clerk", "ChangeRoleMClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Bookings Clerk", "ChangeRoleClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Manager", "ChangeRoleManager", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Administrator", "ChangeRoleAdmin", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    }
+}
+<br />
+<br />
+<h3>Administrators</h3>
+<p>Full system access</p>
+@foreach (var targetUser in Model)
+{
+    if (targetUser.Roles.Contains("Admin"))
+    {
+        <div>
+            <div class="simple-box">
+                <div style="font:12px">ID: @targetUser.Id</div>
+                <div><b>Name: </b>@targetUser.FirstName @targetUser.LastName </div>
+                <div><b>Email: </b>@targetUser.Email  </div>
+                <div><b>Username: </b>@targetUser.InputUsername</div>
+                <div><b>Date of Birth: </b>@targetUser.DateOfBirth</div>
+                <div><b>Age: </b>@targetUser.Age</div>
+                <div><b>Gender: </b>@targetUser.Gender</div>
+                <div>
+                    <b>Address: </b><br />
+                    @targetUser.HouseNumber
+                    @targetUser.Street<br />
+                    @targetUser.Town<br />
+                    @targetUser.PostCode<br />
+                </div>
+
+
+                @foreach (var role in targetUser.Roles)
+                {
+                    <div>Access Level: <b>@role </b></div>
+                }
+
+                <br />
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Change Access Level
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">@Html.ActionLink("User", "ChangeRoleUser", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Member", "ChangeRoleMember", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Staff", "ChangeRoleStaff", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Membership Clerk", "ChangeRoleMClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Bookings Clerk", "ChangeRoleClerk", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Manager", "ChangeRoleManager", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Administrator", "ChangeRoleAdmin", "Admin", new { id = @targetUser.Id, roles = targetUser.Roles }, new { @class = "btn btn-default" })</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    }
+}
+
+
+<hr />
+
+<footer>
+    <p>@Html.ActionLink("Back", "AdminSettings", "Admin")</p>
+
+
+    @section scripts{
+        @Scripts.Render("~/bundles/ajax")
+    }
+</footer>
+
+
+
+

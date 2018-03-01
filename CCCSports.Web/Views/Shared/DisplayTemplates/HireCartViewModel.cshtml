@@ -1,0 +1,22 @@
+﻿@model CCCSports.Web.Models.HireCartViewModel
+
+<div class="row">
+
+    @if (Model.Items.Any())
+    {
+        @Html.DisplayFor(x => x.Items)
+        <div>Total Cost: @Model.TotalCost</div>
+    }
+    else
+    {
+        <p><i>No equipment to show</i></p>
+    }
+
+</div>
+
+
+
+
+
+
+

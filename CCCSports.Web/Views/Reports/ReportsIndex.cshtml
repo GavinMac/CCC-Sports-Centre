@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Reports";
+}
+
+<h2>Reports</h2>
+
+<div style="align-content:center">
+    <p>Here you can generate a report as of today's date. This will download a PDF file.</p>
+    <br />
+    <p style="font-size:18px">@DateTime.Now.ToShortDateString();</p>
+    <br />
+    @Html.ActionLink("Generate Report", "BookingReport", "Reports" , null, new { @class = "btn btn-primary" })
+</div>
+
+
+

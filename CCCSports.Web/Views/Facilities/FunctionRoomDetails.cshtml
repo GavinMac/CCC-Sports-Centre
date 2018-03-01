@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "FunctionRoomDetails";
+}
+
+@Styles.Render("~/Content/css")
+
+<div style="align-content: center">
+    <h2>Function Room</h2>
+
+    <p>The Function Room is available to be booked by members for any other function or event. This includes birthday parties, conferences or other such events.</p>
+    <br />
+
+    <img src="~/Content/Images/FunctionRoomSmall.jpg" alt="Function Room" />
+    <br />
+    <div>
+        @if (User.IsInRole("Member") || User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk"))
+        {
+            <br />
+            @Html.ActionLink("Make Booking", "MakeRoomBooking", null, new { @class = "btn btn-primary" })
+        }
+        else
+        {
+            <button type="button" class="btn btn-primary disabled">Make Booking</button>
+                <i>You must be a member to make a booking in the function room.</i>
+        }
+    </div>
+
+</div>
+
+<hr />
+
+<div>
+    @Html.ActionLink("Back", "FacilitiesHome", "Facilities")
+</div>
+
+
+

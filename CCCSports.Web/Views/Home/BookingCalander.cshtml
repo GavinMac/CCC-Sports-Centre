@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Booking Calander";
+}
+
+<h2>All Bookings</h2>
+@if (User.IsInRole("Member"))
+{
+    <br />
+    <p>If you've made any bookings, you can see a list of all your bookings here:</p>
+    <span class="btn btn-default">@Html.ActionLink("My Bookings", "Bookings", "Bookings")</span>
+    <br />
+    <br />
+}
+
+@if (User.IsInRole("Admin") || User.IsInRole("Clerk") || User.IsInRole("Manager"))
+{
+    <br />
+        <p>See all user bookings here:</p>
+        <span class="btn btn-default">@Html.ActionLink("All Bookings", "AllBookings", "Bookings")</span>
+        <br />
+        <br />
+}
+
+
+<div id="Dpc">
+
+    <script src="@Url.Content("~/Scripts/DayPilot/daypilot-all.min.js")" type="text/javascript"></script>
+
+
+    <h3>Activity Hall Bookings Calander</h3>
+    <br />
+    <br />
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk"))
+    {
+
+        <br />
+        <div class="top-left">
+            <a href="javascript:dpc.commandCallBack('hallcal-previous');">Previous</a>
+            <span> | </span>
+            <a href="javascript:dpc.commandCallBack('hallcal-today');">Today</a>
+            <span> | </span>
+            <a href="javascript:dpc.commandCallBack('hallcal-next');">Next</a>
+            <br />
+        </div>
+
+
+        @Html.DayPilotCalendar("dpc", new DayPilotCalendarConfig
+       {
+
+           BackendUrl = Url.Content("~/Home/ActivityBackend"),
+           ViewType = DayPilot.Web.Mvc.Enums.Calendar.ViewType.Week,
+           EventMoveHandling = DayPilot.Web.Mvc.Events.Calendar.EventMoveHandlingType.CallBack,
+           EventResizeHandling = DayPilot.Web.Mvc.Events.Calendar.EventResizeHandlingType.CallBack
+       })
+        <hr />
+
+
+
+    }
+
+    else if(User.IsInRole("Member") || User.IsInRole("User") || User.Identity.IsAuthenticated)
+    {
+        <br />
+        <a href="javascript:dpc.commandCallBack('hallcal-previous');">Previous</a>
+        <span> | </span>
+        <a href="javascript:dpc.commandCallBack('hallcal-today');">Today</a>
+        <span> | </span>
+        <a href="javascript:dpc.commandCallBack('hallcal-next');">Next</a>
+
+        <br />
+        @Html.DayPilotCalendar("dpc", new DayPilotCalendarConfig
+       {
+           BackendUrl = Url.Content("~/Home/ActivityBackend"),
+           ViewType = DayPilot.Web.Mvc.Enums.Calendar.ViewType.Week,      
+           
+       })
+        <hr />
+    }
+
+</div>
+
+
+<br />
+<h3>Function Room Bookings Calander</h3>
+<br />
+<div id="Dpc2">
+
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk"))
+    {
+
+
+        <br />
+
+        <a href="javascript:dpc2.commandCallBack('roomcal-previous');">Previous</a>
+        <span> | </span>
+        <a href="javascript:dpc2.commandCallBack('roomcal-today');">Today</a>
+        <span> | </span>
+        <a href="javascript:dpc2.commandCallBack('roomcal-next');">Next</a>
+        <br />
+
+        @Html.DayPilotCalendar("dpc2", new DayPilotCalendarConfig
+   {
+       BackendUrl = Url.Content("~/Home/RoomBackend"),
+       ViewType = DayPilot.Web.Mvc.Enums.Calendar.ViewType.Week,
+       EventMoveHandling = DayPilot.Web.Mvc.Events.Calendar.EventMoveHandlingType.CallBack,
+       EventResizeHandling = DayPilot.Web.Mvc.Events.Calendar.EventResizeHandlingType.CallBack,
+   })
+        <hr />
+    }
+
+    else
+    {
+        <br />
+        <a href="javascript:dpc2.commandCallBack('roomcal-previous');">Previous</a>
+        <span> | </span>
+        <a href="javascript:dpc2.commandCallBack('roomcal-today');">Today</a>
+        <span> | </span>
+        <a href="javascript:dpc2.commandCallBack('roomcal-next');">Next</a>
+        <br />
+
+        @Html.DayPilotCalendar("dpc2", new DayPilotCalendarConfig
+   {
+       BackendUrl = Url.Content("~/Home/RoomBackend"),
+       ViewType = DayPilot.Web.Mvc.Enums.Calendar.ViewType.Week,
+   })
+        <hr />
+    }
+
+
+</div>
+

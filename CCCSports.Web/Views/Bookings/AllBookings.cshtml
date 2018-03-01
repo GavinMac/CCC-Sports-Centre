@@ -1,0 +1,110 @@
+﻿@model CCCSports.Web.Models.AllBookingsViewModel
+
+@{
+    ViewBag.Title = "All Bookings";
+}
+
+<h2>All Bookings</h2>
+
+<h3>Activity Hall</h3>
+<br />
+@if (Model.HallBookingsList != null)
+{
+    foreach (var hallBookings in Model.HallBookingsList)
+    {
+        <div class="simple-box">
+            <table border="1" style="table-layout: fixed; width: 100%; text-align:center; background-color:white;">
+                <tr>
+                    <th> Booking ID</th>
+                    <th> Name</th>
+                    <th> Activity</th>
+                    <th> Courts Used</th>
+                    <th> Start Time</th>
+                    <th> End Time</th>
+                </tr>
+                <tr>
+                    <td>@hallBookings.ActivityBookingId</td>
+                    <td>@hallBookings.CustomerName</td>
+                    <td>@hallBookings.Activity</td>
+                    <td style="word-wrap: break-word">
+                        @if (hallBookings.BookCourt1 == true)
+                        {
+                            <p>Court 1 </p>
+                        }
+                        @if (hallBookings.BookCourt2 == true)
+                        {
+                            <p>Court 2 </p>
+                        }
+                        @if (hallBookings.BookCourt3 == true)
+                        {
+                            <p>Court 3 </p>
+                        }
+                        @if (hallBookings.BookCourt4 == true)
+                        {
+                            <p>Court 4 </p>
+                        }
+                    </td>
+                    <td>@hallBookings.BookingStartTime</td>
+                    <td>@hallBookings.BookingEndTime</td>
+                </tr>
+            </table>
+
+            <br />
+            @Html.ActionLink("Delete Booking", "DeleteHallBooking", "BookHallActivity", new { id = hallBookings.ActivityBookingId }, null)
+            <br />
+            @Html.ActionLink("Edit Booking", "EditHallBooking", "BookHallActivity", new { id = hallBookings.ActivityBookingId }, null)
+            <br />
+            <br />
+        </div>
+
+    }
+}
+else
+{
+    <i>No hall bookings made</i>
+}
+
+<br />
+<br />
+<h3>Function Room</h3>
+<br />
+@if (Model.RoomBookingsList != null)
+{
+
+    foreach (var roomBookings in Model.RoomBookingsList)
+    {
+        <div class="simple-box">
+            <table border="1" style="table-layout: fixed; width: 100%; text-align:center; background-color:white;">
+                <tr>
+                    <th> Booking ID</th>
+                    <th> Name</th>
+                    <th> Function Name</th>
+                    <th> Function description</th>
+                    <th> Start Time</th>
+                    <th> End Time</th>
+                </tr>
+                <tr>
+                    <td>@roomBookings.BookingId</td>
+                    <td>@roomBookings.CustomerName</td>
+                    <td style="word-wrap: break-word">@roomBookings.FunctionName</td>
+                    <td style="word-wrap: break-word">@roomBookings.FunctionDescription</td>
+                    <td>@roomBookings.StartTime</td>
+                    <td>@roomBookings.EndTime</td>
+                </tr>
+            </table>
+
+            <br />
+            @Html.ActionLink("Delete Booking", "DeleteRoomBooking", "RoomBooking", new { id = roomBookings.BookingId }, null)
+            <br />
+            @Html.ActionLink("Edit Booking", "EditRoomBooking", "RoomBooking", new { id = roomBookings.BookingId }, null)
+            <br />
+            <br />
+
+        </div>
+
+    }
+}
+else
+{
+    <i>No room bookings made</i>
+}

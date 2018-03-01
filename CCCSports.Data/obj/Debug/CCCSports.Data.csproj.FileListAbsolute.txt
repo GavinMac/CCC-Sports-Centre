@@ -1,0 +1,83 @@
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.pdb
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.xml
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.csprojResolveAssemblyReference.cache
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.pdb
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.xml
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.csprojResolveAssemblyReference.cache
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+F:\GradedUnitBackups\CCCSportCentre-GavinMacleod-ProjectStart\CCCSports.Data\obj\Debug\CCCSports.Data.pdb
+C:\Users\GaMac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.csprojResolveAssemblyReference.cache
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.xml
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.csprojResolveAssemblyReference.cache
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+F:\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.pdb
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.xml
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+E:\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.pdb
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.xml
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.csprojResolveAssemblyReference.cache
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+C:\Users\GaMac\OneDrive\CityOfGlasgowCollege\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.pdb

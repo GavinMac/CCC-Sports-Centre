@@ -1,0 +1,43 @@
+﻿@model CCCSports.Web.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "Shop";
+}
+
+
+
+<header>
+    @Styles.Render("~/Content/css")
+
+            <div class="container button-wrapper">
+                <div class="pull-right">
+                    <button>@Html.ActionLink("Cart ", "ShoppingCart", "Shop")<span class="glyphicon glyphicon-shopping-cart"></span></button>
+                </div>
+            </div>
+    <h1>CCC Sports Shop</h1>
+    <br />
+
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
+        {
+            <div class="container button-wrapper">
+                <div class="col-md-2 col-md-offset-5">
+                    <button class="btn button-wrapper"><span>@Html.ActionLink("Add Product", "CreateProduct", "Shop")</span></button>
+                </div>
+            </div>
+        }
+</header>
+
+
+
+<div class="row">
+
+    @if (Model.Products.Any())
+    {
+        @Html.DisplayFor(x => x.Products)
+    }
+    else
+    {
+        <p><i>No products available at this time</i></p>
+    }
+
+</div>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "AdminSettings";
+}
+
+<h2>AdminSettings</h2>
+<p>As an admin you can view all users or staff and their details, in the staff page it will also show their allocation.</p>
+
+<div class="container">
+    <h3>View Account Details</h3>
+
+    <span class="btn btn-default">@Html.ActionLink("Users", "DisplayUsers", "Admin")</span>
+
+    <span class="btn btn-default">@Html.ActionLink("Staff", "DisplayStaff", "Admin")</span>
+</div>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Memberships";
+}
+
+@Styles.Render("~/Content/css")
+
+<h2>Members Hub</h2>
+
+@if (User.IsInRole("Member") || User.IsInRole("Admin") || User.IsInRole("Manager"))
+{
+    <h3>Welcome to the Members Hub!</h3>
+    <p>Here you can interact with other members, renew your membership and more!</p>
+
+}
+
+@if (User.IsInRole("User") || User.Identity.IsAuthenticated)
+{
+    <h3>You must be a member to view this page.</h3>
+    <br />
+    <ul>
+        <li>Adult - Over 16</li>
+        <li>Juvenile - Under 16</li>
+        <li>Family - Family</li>
+    </ul>
+    <div class="container button-wrapper">
+        <div class="col-md-2 col-md-offset-5">
+            <button class="btn button-wrapper"><span>@Html.ActionLink("Create Membership", "MembershipSignUp", "Membership")</span></button>
+        </div>
+    </div>
+}
+
+@if (User.Identity.IsAuthenticated == false)
+{
+    <i>You must have an account to view this page.</i>
+    <br />
+    <i>Please @Html.ActionLink("Register", "Register", "Account") an account.</i>
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/ajax")
+}
+

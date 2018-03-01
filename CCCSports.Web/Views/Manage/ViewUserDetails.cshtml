@@ -1,0 +1,74 @@
+﻿@model List<CCCSports.Web.Models.UserDetailsViewModel>
+
+@{ 
+    ViewBag.Title = "Your Details";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+
+<h2>@User.Identity.Name</h2>
+
+<br />
+<p>If you'd like to add you're address, please edit your details!</p>
+<div id="result">
+    <br />
+    @{
+        foreach (var targetUser in Model)
+        {
+
+            if (targetUser.Email == User.Identity.Name)
+            {
+                <div class="col-md-3 .col-md-4 .col-md-4 al">
+                    <div class="simple-box">
+                        <div style="font:12px">ID: @targetUser.Id</div>
+                        <div><b>Name: </b>@targetUser.FirstName @targetUser.LastName </div>
+                        <div><b>Email: </b>@targetUser.Email  </div>
+                        <div><b>Username: </b>@targetUser.InputUsername</div>
+                        <div><b>Date of Birth: </b>@targetUser.DateOfBirth</div>
+                        <div><b>Age: </b>@targetUser.Age</div>
+                        <div><b>Gender: </b>@targetUser.Gender</div>
+                        <div>
+                            @if (targetUser.IsMember == true)
+                            {
+                                <b style="color:#1f9f1e">Member</b>
+                                <i>@targetUser.MemberType</i>
+                            }
+                            else
+                            {
+                                <b style="color:#c23a3a">Non-Member</b>
+                            }
+                        </div><br />
+                        <div>
+                            <b>Address: </b><br />
+                            @targetUser.HouseNumber
+                            @targetUser.Street<br />
+                            @targetUser.Town<br />
+                            @targetUser.PostCode<br />
+                        </div>
+
+                        @foreach (var role in targetUser.Roles)
+                    {
+                            <div>Account Type: <b>@role </b></div>
+                        }
+                        <br />
+                        @Html.ActionLink("Edit Details", "EditDetails","Manage")
+                        <br />
+                        @Html.ActionLink("Delete Account", "DeleteAccount", "Manage")
+                    </div>
+                </div>
+            }
+        }
+    }
+
+
+
+</div>
+<br />
+<footer>
+    <div>
+        @Html.ActionLink("Back", "Index")
+    </div>
+</footer>
+
+
+

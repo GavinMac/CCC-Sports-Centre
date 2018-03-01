@@ -1,0 +1,57 @@
+﻿@model CCCSports.Web.Models.Reports.ReportsViewModel
+
+@{
+    ViewBag.Title = "CCC Sports Report";
+}
+
+<h2>CCC Sports Centre - Full Report @DateTime.Now.ToShortDateString()</h2>
+
+<table border="1">
+    <tr>
+        <th>Hall Bookings Made</th>
+        <th>Function Room Bookings Made</th>
+        <th>All New Memberships Made</th>
+    </tr>
+    <tr>
+        <td>@Model.HallBookingsCount</td>
+        <td>@Model.RoomBookingsCount</td>
+        <td>@Model.MemberSignUpCount</td>
+    </tr>
+
+</table>
+<br />
+<h2>Membership Takings Breakdown</h2>
+<br />
+<table border="1">
+    <tr>
+        <th>Adult Memberships</th>
+        <th>Juvenile Memberships</th>
+        <th>Family Memberships</th>
+    </tr>
+    <tr>
+        <td>@Model.TotalAdultTakings</td>
+        <td>@Model.TotalJuvTakings</td>
+        <td>@Model.TotalFamTakings</td>
+    </tr>
+</table>
+<br />
+<h2>Total Membership Takings</h2>
+<br />
+<table border="1">
+    <tr>
+        <th>
+            TOTAL
+        </th>
+    </tr>
+    <tr>
+        <td><b style="font-size:16px">£@Model.TotalMemberTakings</b></td>
+    </tr>
+</table>
+<br />
+<br />
+@if (Model.WasError == true)
+{
+    @Model.ErrorString 
+}
+
+

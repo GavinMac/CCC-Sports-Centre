@@ -1,0 +1,13 @@
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll.config
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\CCCSports.Data.pdb
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.dll
+C:\Users\gamac\Documents\Visual Studio 2015\Projects\CCCSportCentre-GavinMacleod\CCCSports.Data\obj\Debug\CCCSports.Data.pdb

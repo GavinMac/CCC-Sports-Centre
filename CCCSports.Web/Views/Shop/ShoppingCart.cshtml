@@ -1,0 +1,12 @@
+﻿@model CCCSports.Web.Models.ShoppingCartViewModel
+
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<h2>Shopping Cart</h2>
+
+
+<div>@Model.AmountInCart items in cart.</div>
+
+<div class="product-cost">Cart Total: @Model.TotalCost</div>

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Activiy Hall";
+}
+
+@Styles.Render("~/Content/css")
+
+   <div>
+        <h2>Activity Hall</h2>
+
+        <p>The activity hall can be split into 4 courts, you can book 1 to 4 courts, 4 courts being the full hall.</p>
+        <br />
+
+        <img src="~/Content/Images/ActivityHallSmall.jpg" alt="Activity Hall"/>
+        <br />
+       <br />
+       <p>The hall is split into 4 courts. Each court consists of 2 badmington courts, courts 1+2 or 3+4 make up an indoor football pitch, the entire hall can be used for a full length football or basketball court.</p>
+        <img src="~/Content/Images/HallLayout.jpg" alt="Hall Layout"/>
+       <br />
+        <div>
+            @if (User.IsInRole("Member") || User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("BookingsClerk"))
+            {
+                @Html.ActionLink("Make Booking", "MakeActivityBooking", null, new { @class = "btn btn-primary" })
+            }
+            else
+            {
+                <button type="button" class="btn btn-primary disabled">Make Booking</button>
+                <i>You must be a member to make a booking in the activity hall.</i>
+            }
+        </div>
+    </div>
+<hr />
+
+<div>
+    @Html.ActionLink("Back", "FacilitiesHome", "Facilities")
+</div>
+
+

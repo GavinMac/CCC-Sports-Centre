@@ -1,0 +1,31 @@
+﻿@model CCCSports.Data.HallActivityBooking
+
+@{
+    ViewBag.Title = "Cancel Booking";
+}
+
+<h2>Cancel Hall Booking</h2>
+
+<h3>Are you sure you want to delete this booking?</h3>
+<div>
+    <h4>Hall Activity Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Activity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activity)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back", "Bookings","Bookings")
+        </div>
+    }
+</div>

@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="myCarousel" class= "carousel slide">
+
+    <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ul>
+
+    <div class="carousel-inner">
+       
+        <div class="item active">
+            <img src="~/Content/Images/CCCHeader.jpg" alt="Header" class="img-responsive" />
+            <div class="carousel-caption">
+                <h3></h3>
+            </div>
+        </div>
+
+         
+        <div class="item">
+            <img src="~/Content/Images/SwimmingPool.jpg" alt="Swimming pool" class="img-responsive"/>
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Images/ActivityHall.jpg" alt="Activity Hall" class="img-responsive" />
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Images/Gym.jpg" alt="Gym" class="img-responsive" />
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Images/Cafe.jpg" alt="Cafe" class="img-responsive" />
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Images/FunctionRoom.jpg" alt="Function Room" class="img-responsive" />
+        </div>
+
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+    
+    </div>
+</div>
+
+
+<script src="~/Scripts/bootstrap.js"></script>
+
+
+<div class="jumbotron">
+    <h1>Welcome!</h1>
+    <br />
+    <p>The CCC Sports Centre has been in operation for 4 years. 
+    We offer a range of classes and activities and a membership program. See the membership page for more information.</p>
+    <h2><b>Facilities</b></h2>
+    <p>We have a range of facilities available to be used by everyone. This includes:</p>
+    <ul>
+        <li>A swimming pool</li>
+        <li>A large activity hall</li>
+        <li>A gym</li>
+        <li>A cafe/bar</li>
+        <li>A small function room</li>
+    </ul>
+    <br />
+    <p>See our facilities page for more information and booking availibilites.</p>
+
+    <h2><b>Opening Hours</b></h2>
+    <p>The centre is open from 8:00 to 20:00 daily. 
+    Some time slots are reserved for specialised activities and some time slots are booked by clubs.</p>
+    <br />
+    <h2>Memberships</h2>
+    <p>We offer a membership program for our customers. The membership types are as follows:</p>
+    <ul>
+        <li>Adult</li>
+        <li>Juvenile</li>
+        <li>Family</li>
+    </ul>
+    <br />
+    @Html.ActionLink("Create a Membership", "MembersHome", "Membership")
+
+
+</div>

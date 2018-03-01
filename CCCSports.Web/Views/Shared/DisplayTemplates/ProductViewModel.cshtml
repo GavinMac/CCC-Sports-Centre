@@ -1,0 +1,36 @@
+﻿@model CCCSports.Web.Models.ProductViewModel
+
+<header>@Styles.Render("~/Content/css")</header>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="product-box">
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
+        {
+            @Html.ActionLink("Remove Item", "DeleteProduct", "Shop", new { id = Model.ProductId }, null)<br />
+            @Html.ActionLink("Edit Item", "EditProduct", "Shop", new { id = Model.ProductId }, null)
+        }
+
+
+        <h3>@Model.ProductName</h3>
+        <br />
+        <div class="product-id">Product ID: #@Model.ProductId</div>
+        <div class="product-rating">Rating: @Model.ProductRating/5</div>
+        <br/>
+        <div class="product-description">
+            <b>Product Description: </b>
+            <br/>
+            @Model.ProductDesc
+            <br/>
+        </div>
+        <br/>
+        <div class="product-cost"><b>£@Model.ProductCost</b></div>
+        <br />
+    </div>
+    <div class="container button-wrapper">
+        <button class="btn button-wrapper"><span>@Html.ActionLink("Add to Cart", "AddToCart", "Shop")</span></button>
+    </div>
+    <div class="product-stock">(@Model.ProductStock left in stock)</div>
+</div>
+
+
+

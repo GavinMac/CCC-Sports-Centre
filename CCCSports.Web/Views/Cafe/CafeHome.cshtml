@@ -1,0 +1,31 @@
+﻿@model CCCSports.Web.Models.CafeItemViewModel
+
+@{
+    ViewBag.Title = "Cafe Home";
+}
+
+<h2>Cafe Home</h2>
+
+
+@if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
+{
+    <div class="container button-wrapper">
+        <div class="col-md-2 col-md-offset-5">
+            <button class="btn button-wrapper"><span>@Html.ActionLink("Add Cafe Item", "AddItem", "Cafe")</span></button>
+        </div>
+    </div>
+}
+
+<div class="row">
+
+    @if (Model.CafeItems.Any())
+    {
+        @Html.DisplayFor(x => x.CafeItems)
+    }
+    else
+    {
+        <p><i>No products to show</i></p>
+    }
+
+</div>
+
