@@ -48,9 +48,9 @@ namespace CCCSports.Web.Controllers
             var gateway = new BraintreeGateway
             {
                 Environment = Braintree.Environment.SANDBOX,
-                MerchantId = "p52gcdzknxgtcmgw",
-                PublicKey = "7qqjxbd8jd9c2wc2",
-                PrivateKey = "4224067104270da32d5b9671710298b3"
+                MerchantId = "",
+                PublicKey = "",
+                PrivateKey = ""
             };
 
             var clientToken = gateway.ClientToken.generate();
@@ -136,9 +136,9 @@ namespace CCCSports.Web.Controllers
             var gateway = new BraintreeGateway
             {
                 Environment = Braintree.Environment.SANDBOX,
-                MerchantId = "p52gcdzknxgtcmgw",
-                PublicKey = "7qqjxbd8jd9c2wc2",
-                PrivateKey = "4224067104270da32d5b9671710298b3"
+                MerchantId = "",
+                PublicKey = "",
+                PrivateKey = ""
             };
 
 
@@ -289,7 +289,7 @@ namespace CCCSports.Web.Controllers
             try
             {
                 //var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
-                string apiKey = "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";
+                string apiKey = "";
                 var client = new SendGridClient(apiKey);
 
                 var from = new EmailAddress("membership@cccsports.com");
